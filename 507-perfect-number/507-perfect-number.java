@@ -4,7 +4,7 @@ class Solution {
             int sum = 0;
              if(num==1)
                  return false;
-            for(i=2;i*i<=num;i++)
+            for(i=2;i<=(int)Math.sqrt(num);i++)
             {
                 if(num%i==0)
                 {
