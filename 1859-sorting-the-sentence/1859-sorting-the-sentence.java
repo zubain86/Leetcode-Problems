@@ -1,7 +1,6 @@
 class Solution {
     public String sortSentence(String s) {
         String a[] = s.split(" ");
-        System.out.println(a.length);
         String b[] = new String[a.length+1];
         for(int i=0;i<a.length;i++)
         {
