@@ -1,7 +1,6 @@
 class Solution {
     public boolean checkIfExist(int[] arr) {
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
         int i = 0;
         int j = i+1;
         while(i<arr.length-1)
