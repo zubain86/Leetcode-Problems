@@ -1,21 +1,25 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-ArrayList<Integer> list = new ArrayList<>();
-        int i;
-        for(i=0;i<m;i++)
+        int last = m+n-1;
+        while(m>0&&n>0)
         {
-        
-                list.add(nums1[i]);
-}
-        for(i=0;i<n;i++)
+            if(nums1[m-1]>nums2[n-1])
+            {
+                nums1[last] = nums1[m-1];
+                m--;
+            }
+            else
+            {
+                nums1[last] = nums2[n-1];
+                n--;
+            }
+            last--;
+        }
+        while(n>0)
         {
-                list.add(nums2[i]);
-
+            nums1[last] = nums2[n-1];
+            n--;
+            last--;
+        }
 }
-        Collections.sort(list);
-        for(i=0;i<list.size();i++)
-        {
-            nums1[i] = list.get(i);
-}
-    }
 }
