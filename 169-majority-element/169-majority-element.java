@@ -1,34 +1,37 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int i,count=1;
-        int result = 0;
-        int n = nums.length;
-        Arrays.sort(nums);
-        if(n>1)
+        int ansIndex = 0;
+        int count = 1;
+        int i;
+        for(i=0;i<nums.length;i++)
         {
-        for(i=0;i<nums.length-1;i++)
-        {
-            if(nums[i]==nums[i+1])
+            if(nums[i]==nums[ansIndex])
             {
-                 count++;
+                count++;
             }
             else
             {
+                count--;
+            }
+            if(count==0)
+            {
+                ansIndex = i;
                 count = 1;
             }
-            if(count>n/2)
-            {
-                result = nums[i];
-            }
-            
-            
         }
-        return result;
-        }
-        else
+        count = 0 ;
+        for(i=0;i<nums.length;i++)
         {
-            return 1;
-         }
+            if(nums[i]==nums[ansIndex])
+            {
+                count++;
+            }
+        }
+        if(count>nums.length/2)
+        {
+            return nums[ansIndex];
+        }
+        return -1;
         
     }
 }
