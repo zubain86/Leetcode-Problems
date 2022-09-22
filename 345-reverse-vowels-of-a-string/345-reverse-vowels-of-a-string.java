@@ -10,9 +10,21 @@ class Solution {
         int i = 0;
         int j = s.length()-1;
         char[] arr = s.toCharArray();
+        HashSet<Character> set = new HashSet<>();
+        set.add('a');
+        set.add('e');
+        set.add('i');
+        set.add('o');
+        set.add('u');
+        set.add('A');
+        set.add('E');
+        set.add('I');
+        set.add('O');
+        set.add('U');
+        
         while(i<j)
         {
-            if(checkVowel(arr[i])&&checkVowel(arr[j]))
+            if(set.contains(arr[i])&&set.contains(arr[j]))
             {
                 char temp = arr[i];
                 arr[i] = arr[j];
@@ -20,7 +32,7 @@ class Solution {
                 i++;
                 j--;
             }
-            else if(checkVowel(arr[i]))
+            else if(set.contains(arr[i]))
             {
                 j--;
             }
