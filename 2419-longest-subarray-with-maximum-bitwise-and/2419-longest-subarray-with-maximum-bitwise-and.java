@@ -11,7 +11,7 @@ class Solution {
         int maxcount = 0;
         for(i=0;i<nums.length;i++)
         {
-            and = nums[i];
+            and = max & nums[i];
             if(and==max)
             {
                 count++;
