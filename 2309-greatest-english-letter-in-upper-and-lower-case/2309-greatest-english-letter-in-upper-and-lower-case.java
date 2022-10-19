@@ -13,8 +13,7 @@ class Solution {
         {
             if(set.contains(ch)&& set.contains(Character.toLowerCase(ch)))
             {
-                max = "";
-                max = max + ch;
+             max= String.valueOf(ch);
             }
         }
         return max;
