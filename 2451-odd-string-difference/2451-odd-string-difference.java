@@ -14,7 +14,6 @@ class Solution {
         }
               outer.add(list);
         }
-        System.out.println(outer);
         List<Integer> list1;
         List<Integer> list2;
         List<Integer> list3;
