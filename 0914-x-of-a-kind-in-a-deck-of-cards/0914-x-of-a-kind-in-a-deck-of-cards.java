@@ -17,30 +17,20 @@ class Solution {
             }
             count = 1;
         }
-     
-        ArrayList<Integer> list = new ArrayList<>();;
-        for(Integer j : map.values())
+        Integer[] list = map.values().toArray(new Integer[map.size()]);
+        int gcd = list[0];
+        for(i=1;i<list.length;i++ )
         {
-           list.add(j);         
-         }
-        System.out.println(list);
-        int gcd = GCD(list);
+              gcd = GCD(gcd,list[i]);       
+        }
        if(gcd==1)
            return false;
         else 
             return true;
         
     }
-    public int GCD(ArrayList<Integer> list)
-    {
-        int i,gcd = list.get(0);
-        for(i=1;i<list.size();i++)
-        {
-            gcd = helper(gcd,list.get(i));
-        }
-         return gcd;
-    }
-    public int helper(int n1, int n2)
+  
+    public int GCD(int n1, int n2)
     { 
          int min = (int)Math.min(n1,n2);
         int i;
