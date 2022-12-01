@@ -34,8 +34,6 @@ class Solution {
             }
 
         }
-        System.out.println(i);
-        System.out.println(j);
         if(i==name.length() && j<=typed.length()-1)
             return false;
         if(j==typed.length()&&i<=name.length()-1)
