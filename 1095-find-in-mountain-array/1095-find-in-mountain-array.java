@@ -24,10 +24,9 @@ class Solution {
          
           int peak = start;
           int left = search(0,peak,mountainArr,target,0);
-          System.out.println(left);
           int right = search(peak+1,mountainArr.length()-1,mountainArr,target,1);
-           System.out.println(right);  
-        int res;
+    
+          int res;
           if(left!=-1 && right!=-1)
           res = Math.min(left,right);
           else 
