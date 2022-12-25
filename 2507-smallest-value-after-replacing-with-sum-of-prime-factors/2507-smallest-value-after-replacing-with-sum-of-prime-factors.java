@@ -2,10 +2,9 @@ class Solution {
     public int smallestValue(int n) {
         
         ArrayList<Integer> list = sieve(n);
-        System.out.println(list);
         int i,sum=0,number = 1;
         
-        while(number!=n && !list.contains(n))
+        while(number!=n)
         {
             number = n;
             sum = 0;
@@ -14,14 +13,11 @@ class Solution {
             if(n%list.get(i)==0)
             {
                 sum = sum + list.get(i);
-                System.out.println(sum);
                 n = n/list.get(i);
-                System.out.println(n);
                 i = -1;
             }
                 
         }
-            System.out.println(sum);
         n = sum;
         }
         return n;
