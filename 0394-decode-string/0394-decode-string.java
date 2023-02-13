@@ -35,7 +35,6 @@ class Solution {
                     }
                 }
             }
-            System.out.println(stack);
         }
         
         return ans;
