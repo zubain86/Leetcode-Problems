@@ -30,7 +30,6 @@ class Solution {
             if((nums[l]>nums[i] && nums[i]<nums[r]) || (nums[l]<nums[i] && nums[i]>nums[r]))
             {
                 count++;
-                System.out.println(i);
             }
         }
 
