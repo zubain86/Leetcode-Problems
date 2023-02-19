@@ -32,7 +32,6 @@ class Solution {
             {
                list = new ArrayList<>();
                level = out.get(out.size()-1).size();
-                System.out.println(level);
             }
             if(node.left!=null)
             {
@@ -47,7 +46,6 @@ class Solution {
             level--;
             if(level==0 && !list.isEmpty())
                 out.add(list);
-            System.out.println(out);
             
         }
         
