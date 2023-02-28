@@ -24,7 +24,6 @@ class Solution {
                     boolean ch = bfs(grid1,grid2, visit, new Pair(i,j));
                     if(ch==true)
                     {
-                        System.out.println(i+" "+j);
                         count++;
                     }
                 }
