@@ -8,7 +8,6 @@ class Solution {
             sum1 += 2 *player1[i];
             else
                 sum1 += player1[i];
-            System.out.println(sum1);
         }
         int sum2 = 0;
         for (int i = 0; i < player2.length; i++) {
