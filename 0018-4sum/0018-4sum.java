@@ -13,16 +13,13 @@ class Solution {
                     int right = nums.length - 1;
                     while(left<right)
                     {
-                        int sum = nums[i] + nums[j] + nums[left] + nums[right];
-                       
+                           long sum = (long)nums[i] + nums[j] + nums[left] + nums[right];
                         if(sum<target)
                             left++;
                         else if(sum>target)
                             right--;
                         else
                         {
-                             if(nums[i]>0 && nums[j]>0 && nums[left]>0 && nums[right]>0 && target<0)
-                                 break;
                             List<Integer> list = new ArrayList<>();
                             list.add(nums[i]);
                             list.add(nums[j]);
